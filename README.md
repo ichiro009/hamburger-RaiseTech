@@ -1,2 +1,3 @@
 FLOCSSでコーディングを行う事
 コーディング後にWordPress化する事
+ブレークポイントmax-width520px/min-width960px
