@@ -1,3 +1,3 @@
 FLOCSSでコーディングを行う事
 コーディング後にWordPress化する事
-ブレークポイントmix-width520px/min-width960px
+ブレークポイントmin-width520px/min-width960px
