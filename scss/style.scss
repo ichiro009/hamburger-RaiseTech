@@ -1,6 +1,8 @@
 @charset "utf-8";
 // foundation
-
+@use "./foundation/variable"as v;
+@use "./foundation/mixin"as m;
+@use "./foundation/base";
 
 // layout
 
@@ -9,5 +11,6 @@
 // project
 
 // utility
+@use "./object/utility/display";
+// 一時的にこちらに記入して随時ファイル分けをする
 
-// 一時的にこちらの記入して随時ファイル分けをする

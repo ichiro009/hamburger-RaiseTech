@@ -1,0 +1,12 @@
+@mixin b-p($point) {
+  @if $point==tab {
+    @media (min-width:520px) {
+      @content;
+    }
+  }
+  @if $point==pc {
+    @media (min-width:960px) {
+      @content;
+    }
+  }
+}

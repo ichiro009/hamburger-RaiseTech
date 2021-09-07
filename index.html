@@ -17,19 +17,20 @@
   <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
   <!-- 最後にCSSを読み込ませる -->
   <link rel="stylesheet" href="css/style.css">
-  <title>ﾊﾝﾊﾞｰｶﾞｰｻｲﾄ</title>
+  <!-- 半角カタカナは、エラーの原因になりうるので、全角に変更 -->
+  <title>ハンバーガー</title>
 </head>
 <body>
 <!-- c-grid という解釈もある？？ -->
 <div class="l-grid">
   <header class="l-header p-header">
-    <h1 class="p-header__title c-title-lv1">Hamburger</h1>
+    <h1 class="p-header__title c-title--lv1">Hamburger</h1>
     <form class="p-form-box">
       <input class="p-form-box__input" type="search">
       <button class="p-form-box__submit" type="submit">検索</button>
     </form>
     <!-- Menu はPCサイズのみ非表示、tab/sp は表示-->
-    <button class="p-header__menu-btn c-menu-btn u-disp-pc-none">Menu</button>
+    <button class="p-header__menu-btn c-menu-btn u-disp--pc-none">Menu</button>
   </header>
   <main class="l-main">
     <div class="p-main-visual">
@@ -42,13 +43,13 @@
             <!-- TakeOut とEat INとでh2の色が違うので注意 -->
             <h2 class="p-branch__title">Take Out</h2>
             <div class="p-branch__bottom-box">
-              <dl class="p-branch__bottom-list">
-                <dt class="p-branch__bottom-dt">Take OUT</dt>
-                <dd class="p-branch__bottom-dd">当店のテイクアウトで利用できる商品を掲載しています</dd>
+              <dl class="p-branch__bottom-box__list">
+                <dt class="p-branch__bottom-box__dt">Take OUT</dt>
+                <dd class="p-branch__bottom-box__dd">当店のテイクアウトで利用できる商品を掲載しています</dd>
               </dl>
-              <dl class="p-branch__bottom-list">
-                <dt class="p-branch__bottom-dt">Take OUT</dt>
-                <dd class="p-branch__bottom-dd">当店のテイクアウトで利用できる商品を掲載しています</dd>
+              <dl class="p-branch__bottom-box__list">
+                <dt class="p-branch__bottom-box__dt">Take OUT</dt>
+                <dd class="p-branch__bottom-box__dd">当店のテイクアウトで利用できる商品を掲載しています</dd>
               </dl>
             </div>
           </a>
@@ -56,14 +57,14 @@
         <li><a href="page.html" class="p-branch__item--eatin">
             <!-- TakeOut とEat INとでh2の色が違うので注意 -->
             <h2 class="p-branch__title">Eat In</h2>
-            <div class="p-branch-bottom-box">
-              <dl class="p-branch__bottom-list">
-                <dt class="p-branch__bottom-dt">Take OUT</dt>
-                <dd class="p-branch__bottom-dd">当店のテイクアウトで利用できる商品を掲載しています</dd>
+            <div class="p-branch__bottom-box">
+              <dl class="p-branch__bottom-box__list">
+                <dt class="p-branch__bottom-box__dt">Take OUT</dt>
+                <dd class="p-branch__bottom-box__dd">当店のテイクアウトで利用できる商品を掲載しています</dd>
               </dl>
-              <dl class="p-branch__bottom-list">
-                <dt class="p-branch__bottom-dt">Take OUT</dt>
-                <dd class="p-branch__bottom-dd">当店のテイクアウトで利用できる商品を掲載しています</dd>
+              <dl class="p-branch__bottom-box__list">
+                <dt class="p-branch__bottom-box__dt">Take OUT</dt>
+                <dd class="p-branch__bottom-box__dd">当店のテイクアウトで利用できる商品を掲載しています</dd>
               </dl>
             </div>
           </a>
@@ -90,9 +91,9 @@
 
   <aside class="l-aside p-aside">
     <!--✖ボタン、PCサイズは非表示、tab/sp のみ表示 -->
-    <button class="p-asaide__btn u-disp-pc-none"></button>
+    <button class="p-asaide__btn u-disp--pc-none">✖</button>
     <!-- Menu はPCサイズのみ表示、tab/sp は非表示-->
-    <h2 class="p-aside__title u-disp-pc-only">Menu</h2>
+    <h2 class="p-aside__title u-disp--pc-only">Menu</h2>
     <ul class="p-menu-list">
       <!-- バーガー -->
       <li class="p-menu-list__item">

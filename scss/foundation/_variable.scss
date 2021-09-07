@@ -9,8 +9,8 @@ $bg-colors: (
 @function bg-colors($key) {
   @return map-get($bg-colors, $key);
 }
-
 $gray: #707070;
 $black: #3C2A10;
 $white: #ffffff;
 $d-white:#eaeaea;
+
