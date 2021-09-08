@@ -1,2 +1,23 @@
 @use "../../foundation/mixin"as m;
 @use "../../foundation/variable"as v;
+
+// PCサイズのみ非表示のボタン、u-disp--pc-noneで非表示に
+// p-header__menu-btnに配置関係を記入
+.c-menu-btn {
+  font-family: "Roboto", sans-serif;
+  font-weight: bold;
+  font-size: 5.33vw;
+  @include m.b-p(tab) {
+    font-size: 4.796vw;
+  }
+  &.is-active {
+    font-size: 0px;
+    background: url(../icon/cross.png) no-repeat;
+    background-size: cover;
+    width: 5.33vw;
+    aspect-ratio: 1;
+    @include m.b-p(tab) {
+      width: 4.796vw;
+    }
+  }
+}

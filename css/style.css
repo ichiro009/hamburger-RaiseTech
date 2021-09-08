@@ -54,6 +54,10 @@ a {
   }
 }
 
+.l-main {
+  grid-area: main;
+}
+
 .c-title--lv1 {
   line-height: 1.325;
   font-size: 10.666vw;
@@ -70,22 +74,26 @@ a {
   }
 }
 
-@media (min-width: 960px) {
-  .u-disp--pc-none {
-    display: none;
-  }
-}
-.u-disp--pc-only {
-  display: none;
+.c-menu-btn {
+  font-family: "Roboto", sans-serif;
+  font-weight: bold;
+  font-size: 5.33vw;
 }
 @media (min-width: 520px) {
-  .u-disp--pc-only {
-    display: none;
+  .c-menu-btn {
+    font-size: 4.796vw;
   }
 }
-@media (min-width: 960px) {
-  .u-disp--pc-only {
-    display: block;
+.c-menu-btn.is-active {
+  font-size: 0px;
+  background: url(../icon/cross.png) no-repeat;
+  background-size: cover;
+  width: 5.33vw;
+  aspect-ratio: 1;
+}
+@media (min-width: 520px) {
+  .c-menu-btn.is-active {
+    width: 4.796vw;
   }
 }
 
@@ -135,29 +143,6 @@ a {
 }
 .p-header__menu-btn.is-active {
   right: 32px;
-}
-
-.c-menu-btn {
-  font-family: "Roboto", sans-serif;
-  font-weight: bold;
-  font-size: 5.33vw;
-}
-@media (min-width: 520px) {
-  .c-menu-btn {
-    font-size: 4.796vw;
-  }
-}
-.c-menu-btn.is-active {
-  font-size: 0px;
-  background: url(../icon/cross.png) no-repeat;
-  background-size: cover;
-  width: 5.33vw;
-  aspect-ratio: 1;
-}
-@media (min-width: 520px) {
-  .c-menu-btn.is-active {
-    width: 4.796vw;
-  }
 }
 
 .p-form-box {
@@ -238,26 +223,70 @@ a {
   border: 2px solid currentColor;
 }
 
-.l-main {
-  grid-area: main;
-}
-
 .p-main-visual {
-  aspect-ratio: 375/217;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-left: 6.666%;
+  aspect-ratio: 375/285;
+  background: url(../imges/front-page/sp/mainvisual-sp.jpg) no-repeat;
+  background-size: cover;
+  background-position: center center;
 }
 @media (min-width: 520px) {
   .p-main-visual {
     aspect-ratio: 834/285;
+    background: url(../imges/front-page/tablet/front_mainvisual_tab.jpg) no-repeat;
+    background-size: contain;
   }
 }
 @media (min-width: 960px) {
   .p-main-visual {
     aspect-ratio: 1553/530;
+    background: url(../imges/front-page/pc/mainvisual-pc.jpg) no-repeat;
+    background-size: cover;
+    background-position: center center;
+  }
+}
+.p-main-visual__title {
+  font-size: 10.66vw;
+  color: #ffffff;
+}
+@media (min-width: 520px) {
+  .p-main-visual__title {
+    font-size: 4.316vw;
+  }
+}
+@media (min-width: 960px) {
+  .p-main-visual__title {
+    font-size: 1.875vw;
+  }
+}
+
+@media (min-width: 960px) {
+  .u-disp--pc-none {
+    display: none;
+  }
+}
+.u-disp--pc-only {
+  display: none;
+}
+@media (min-width: 520px) {
+  .u-disp--pc-only {
+    display: none;
+  }
+}
+@media (min-width: 960px) {
+  .u-disp--pc-only {
+    display: block;
   }
 }
 
 .p-branch {
-  aspect-ratio: 375/285;
+  aspect-ratio: 375/1374;
   background: #fffdfa;
 }
 @media (min-width: 520px) {
