@@ -5,47 +5,134 @@
 @use "./foundation/base";
 
 // 一時的にこちらに記入して随時ファイル分けをする
+// こちらとは変数・mixinファイルへのパスが変わるので注意
 // layout
-
+@use "./layout/grid";
+@use "./layout/header";
 // component
-
+@use "./object/component/title";
 // project
 
 // utility
 @use "./object/utility/display";
-.l-grid {
-  display: grid;
-  grid-template:
-    "header aside"
-    "main   aside"
-    "footer aside"
-    /100% 87.466%;
+
+.p-header {
+  padding: 10% 8.266% 10% 6.4%;
+  color: v.$gray; //ヘッダーの文字色は全て同じ色、親継承
+  position: relative;
   @include m.b-p(tab) {
-    grid-template:
-      "header aside"
-      "main   aside"
-      "footer aside"
-      /100% 44%;
+    padding: 4.796% 17.266%;
   }
   @include m.b-p(pc) {
-    grid-template:
-      "header aside"
-      "main   aside"
-      "footer footer"
-      /80.885% 19.115%;
+    padding: 0 1.931% 0 4.185%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__title {
+    text-align: center;
+    margin-bottom: 10.1%;
+    @include m.b-p(tab) {
+      margin-bottom: 4.556%;
+    }
+    @include m.b-p(pc) {
+      margin-bottom: 0px;
+    }
+  }
+  &__menu-btn {
+    position: absolute;
+    z-index: 100;
+    top: 14px;
+    right: 16px;
+    &.is-active {
+      right: 32px;
+    }
   }
 }
-.l-header {
-  grid-area: header;
-  aspect-ratio: 375/217;
-  background: v.bg-colors(header);
+
+
+// PCサイズのみ非表示のボタン、u-disp--pc-noneで非表示に
+.c-menu-btn {
+  font-family: "Roboto", sans-serif;
+  font-weight: bold;
+  font-size: 5.33vw;
   @include m.b-p(tab) {
-    aspect-ratio: 834/217;
+    font-size: 4.796vw;
+  }
+  &.is-active {
+    font-size: 0px;
+    background: url(../icon/cross.png) no-repeat;
+    background-size: cover;
+    width: 5.33vw;
+    aspect-ratio: 1;
+    @include m.b-p(tab) {
+      width: 4.796vw;
+    }
+  }
+}
+
+.p-form-box {
+  aspect-ratio: 320 /46;
+  display: flex;
+  justify-content: space-between;
+  font-size: 4.266vw;
+  position: relative;
+  @include m.b-p(tab) {
+    aspect-ratio: 546 /46;
+    font-size: 1.918vw;
   }
   @include m.b-p(pc) {
-    aspect-ratio: 1553/217;
+    width: 35.15%;
+    font-size: 0.833vw;
+  }
+  &::before {
+    //inputタグに疑似要素は使えないのでこちらに
+    content: " ";
+    display: inline-block;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 3%;
+    width: 4.266vw;
+    aspect-ratio: 1; //1だとwidthと同じheightになる
+    background: url(../icon/Loupe.png) no-repeat;
+    background-size: cover;
+    @include m.b-p(tab) {
+      width: 1.918vw;
+    }
+    @include m.b-p(pc) {
+      width: 0.833vw;
+    }
+  }
+  &__input {
+    width: 71.875%;
+    border: 1px solid currentColor;
+    border-radius: 10px;
+    padding-left: 10%;
+    @include m.b-p(tab) {
+      padding-left: 7%;
+    }
+    @include m.b-p(pc) {
+      padding-left: 6%;
+    }
+    &:focus {
+      border: 2px solid currentColor;
+    }
+  }
+  &__submit {
+    width: 24.375%;
+    background: v.bg-colors(search);
+    font-weight: bold;
+    line-height: 1.43;
+    border: 1px solid currentColor;
+    border-radius: 10px;
+    &:focus {
+      border: 2px solid currentColor;
+    }
   }
 }
+
+
 .l-main {
   grid-area: main;
 }
@@ -78,8 +165,22 @@
   }
 }
 .l-aside {
-  grid-area: aside;
   background: v.bg-colors(aside);
+  position: fixed;
+  width: 87.4%;
+  height: 100vh;
+  top: 0;
+  right: -87.4%;
+  @include m.b-p(tab) {
+    width: 44%;
+    right: -44%;
+  }
+  @include m.b-p(pc) {
+    position: static;
+    width: auto;
+    height: auto;
+    grid-area: aside;
+  }
 }
 .l-footer {
   grid-area: footer;

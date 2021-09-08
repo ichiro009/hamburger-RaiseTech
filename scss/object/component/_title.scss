@@ -1,2 +1,14 @@
-@use "./foundation/variable"as v;
-@use "./foundation/mixin"as m;
+@use "../../foundation/mixin"as m;
+@use "../../foundation/variable"as v;
+
+.c-title--lv1 {
+  line-height: 1.325;
+  font-size: 10.666vw;
+  color: v.$gray;
+  @include m.b-p(tab) {
+    font-size: 4.796vw;
+  }
+  @include m.b-p(pc) {
+    font-size: 3.333vw;
+  }
+}
