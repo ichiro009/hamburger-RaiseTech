@@ -3,7 +3,7 @@ $bg-colors: (
   aside: #f2ede9,
   branch: #fffdfa,
   footer: #9d8670,
-  search: linear-gradient(#f2ede9, #ded8d3),
+  btn: linear-gradient(#f2ede9, #ded8d3),
 );
 
 @function bg-colors($key) {

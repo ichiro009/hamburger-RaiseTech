@@ -21,9 +21,6 @@
 // @useは読み込ませる変数・mixinが無い場合もエラーが出る
 // 一時的にこちらに記入して随時ファイル分けをする
 
-
-
-
 .p-branch {
   aspect-ratio: 375/1374;
   background: v.bg-colors(branch);
@@ -34,11 +31,6 @@
     aspect-ratio: 1553/1447;
   }
 }
-
-
-
-
-
 
 .p-map {
   aspect-ratio: 375/285;
