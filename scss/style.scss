@@ -14,6 +14,7 @@
 @use "./object/project/p-header";
 @use "./object/project/form";
 @use "./object/project/main-visual";
+@use "./object/project/branch";
 // utility
 @use "./object/utility/display";
 // ファイルを分ける時こちらとは変数・mixinファイルへのパスが変わるので注意
@@ -21,19 +22,13 @@
 // @useは読み込ませる変数・mixinが無い場合もエラーが出る
 // 一時的にこちらに記入して随時ファイル分けをする
 
-.p-branch {
-  aspect-ratio: 375/1374;
-  background: v.bg-colors(branch);
-  @include m.b-p(tab) {
-    aspect-ratio: 834/761;
-  }
-  @include m.b-p(pc) {
-    aspect-ratio: 1553/1447;
-  }
-}
 
+
+
+
+// ここからsection map に変わります
 .p-map {
-  aspect-ratio: 375/285;
+  aspect-ratio: 375/691;
   @include m.b-p(tab) {
     aspect-ratio: 834/415;
   }
