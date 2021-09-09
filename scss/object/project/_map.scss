@@ -1,0 +1,105 @@
+@use "../../foundation/mixin"as m;
+@use "../../foundation/variable"as v;
+
+.p-map {
+  color: v.$white;
+  aspect-ratio: 375/691;
+  position: relative;
+  @include m.b-p(tab) {
+    aspect-ratio: 834/415;
+  }
+  @include m.b-p(pc) {
+    aspect-ratio: 1553/649;
+  }
+  &::after {
+    //g-mapの透過フィルター１枚目の薄い黒
+    content: "";
+    position: absolute;
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    background: rgba(0, 0, 0, 0.4);
+  }
+  &__g-map {
+    //最下層
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+  }
+  &__filter {
+    //g-mapの透過フィルター２枚目濃い黒
+    position: absolute;
+    z-index: 3;
+    width: 100%;
+    height: 60.057%;
+    background: rgba(0, 0, 0, 0.5);
+    @include m.b-p(tab) {
+      height: 100%;
+    }
+    @include m.b-p(pc) {
+      width: 61.171%;
+    }
+  }
+  &__text-wrap {
+    //テキストが入るエリア最前
+    position: absolute;
+    z-index: 5;
+    height: 100%;
+    padding: 10.666%;
+    display: flex;
+    flex-direction: column;
+    @include m.b-p(tab) {
+      justify-content: space-between;
+      padding: 4.796% 3.477% 3.796% 3.477%;
+    }
+    @include m.b-p(pc) {
+      width: 61.171%;
+    }
+  }
+
+  &__title {
+    font-size: 8vw;
+    margin-bottom: 10.666%;
+    position: relative;
+    @include m.b-p(tab) {
+      font-size: 3.597vw;
+      margin-bottom: 0; //tab PCサイズはタイトルテキスト間の余白をjustify-content: space-between;で調整
+    }
+    @include m.b-p(pc) {
+      font-size: 1.875vw;
+    }
+    &::after {
+      //見出しの下の白い線
+      content: " ";
+      display: inline-block;
+      height: 2px;
+      width: 20vw;
+      background: v.$white;
+      position: absolute;
+      bottom: -5.144vw;
+      left: 0;
+      @include m.b-p(tab) {
+        width: 8.992vw;
+        bottom: -2.544vw;
+      }
+      @include m.b-p(pc) {
+        width: 3.906vw;
+        bottom: -3.544vw;
+      }
+    }
+  }
+  &__text {
+    font-size: 3.533vw;
+    line-height: 2.357;
+    @include m.b-p(tab) {
+      font-size: 1.678vw;
+      line-height: 2;
+    }
+    @include m.b-p(pc) {
+      font-size: 0.833vw;
+    }
+  }
+}
