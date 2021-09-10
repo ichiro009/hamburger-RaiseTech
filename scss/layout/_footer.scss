@@ -1,2 +1,17 @@
-@use "./foundation/variable"as v;
-@use "./foundation/mixin"as m;
+@use "../foundation/variable"as v;
+@use "../foundation/mixin"as m;
+
+.l-footer {
+  grid-area: footer;
+  background: v.bg-colors(footer);
+  aspect-ratio: 375/150;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  @include m.b-p(tab) {
+    aspect-ratio: 834/150;
+  }
+  @include m.b-p(pc) {
+    aspect-ratio: 1920/150;
+  }
+}

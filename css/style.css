@@ -58,6 +58,32 @@ a {
   grid-area: main;
 }
 
+.l-footer {
+  grid-area: footer;
+  background: #9d8670;
+  aspect-ratio: 375/150;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+@media (min-width: 520px) {
+  .l-footer {
+    aspect-ratio: 834/150;
+  }
+}
+@media (min-width: 960px) {
+  .l-footer {
+    aspect-ratio: 1920/150;
+  }
+}
+
 .c-title--lv1 {
   line-height: 1.325;
   font-size: 10.666vw;
@@ -142,6 +168,7 @@ a {
   right: 16px;
 }
 .p-header__menu-btn.is-active {
+  position: fixed;
   right: 32px;
 }
 
@@ -583,6 +610,66 @@ a {
   }
 }
 
+.p-footer {
+  color: #ffffff;
+  text-align: center;
+  padding: 10.4% 0 8%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+@media (min-width: 520px) {
+  .p-footer {
+    padding: 4.676% 0 3.597%;
+  }
+}
+@media (min-width: 960px) {
+  .p-footer {
+    padding: 2.031% 0 1.562%;
+  }
+}
+.p-footer__nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.p-footer__nav-item {
+  font-size: 5.333vw;
+}
+@media (min-width: 520px) {
+  .p-footer__nav-item {
+    font-size: 2.398vw;
+  }
+}
+@media (min-width: 960px) {
+  .p-footer__nav-item {
+    font-size: 1.041vw;
+  }
+}
+.p-footer__copyright {
+  font-size: 3.733vw;
+}
+@media (min-width: 520px) {
+  .p-footer__copyright {
+    font-size: 1.678vw;
+  }
+}
+@media (min-width: 960px) {
+  .p-footer__copyright {
+    font-size: 0.729vw;
+  }
+}
+
 @media (min-width: 960px) {
   .u-disp--pc-none {
     display: none;
@@ -622,22 +709,6 @@ a {
     width: auto;
     height: auto;
     grid-area: aside;
-  }
-}
-
-.l-footer {
-  grid-area: footer;
-  background: #9d8670;
-  aspect-ratio: 375/150;
-}
-@media (min-width: 520px) {
-  .l-footer {
-    aspect-ratio: 834/150;
-  }
-}
-@media (min-width: 960px) {
-  .l-footer {
-    aspect-ratio: 1920/150;
   }
 }
 /*# sourceMappingURL=style.css.map */
