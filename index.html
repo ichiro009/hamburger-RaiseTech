@@ -18,7 +18,7 @@
   <!-- 最後にCSSを読み込ませる -->
   <link rel="stylesheet" href="css/style.css">
   <!-- 半角カタカナは、エラーの原因になりうるので、全角に変更 -->
-  <title>ハンバーガー</title>
+  <title>ハンバーガーサイト</title>
 </head>
 <body class="u-menu-filter">
 <!-- c-grid という解釈もある？？ -->
@@ -96,6 +96,8 @@
 
   <!-- ここからサイドバー -->
   <aside class="l-aside p-aside">
+    <!--PCサイズは非表示,is-activeクラス付与時のみ表示 -->
+    <button class="c-menu-btn--close u-disp--pc-none"></button>
     <!-- Menu はPCサイズのみ表示、tab/sp は非表示-->
     <h2 class="p-aside__title u-disp--pc-only">Menu</h2>
     <ul class="p-menu-list">

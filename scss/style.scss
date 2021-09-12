@@ -8,6 +8,7 @@
 @use "./layout/header";
 @use "./layout/main";
 @use "./layout/footer";
+@use "./layout/aside";
 // component
 @use "./object/component/title";
 @use "./object/component/btn";
@@ -18,80 +19,21 @@
 @use "./object/project/branch";
 @use "./object/project/map";
 @use "./object/project/p-footer";
+@use "./object/project/p-aside";
+@use "./object/project/menu-list";
 // utility
 @use "./object/utility/display";
+@use "./object/utility/menu-filter";
+
 // ファイルを分ける時こちらとは変数・mixinファイルへのパスが変わるので注意
 // @useは、同じファイル名の場合エラーが出るp-を付けて対応
 // @useは読み込ませる変数・mixinが無い場合もエラーが出る場合がある：要検証
 // 一時的にこちらに記入して随時ファイル分けをする
 
-.l-aside {
-  @include m.b-p(pc) {
-    grid-area: aside;
-  }
-}
-.p-aside {
-  color: v.$gray;
-  background: v.bg-colors(aside);
-  width: 87.4%;
-  height: 100vh;
-  position: fixed;
-  z-index: 50; //p-header__menu-btnのz-indexより下の数値にする
-  top: 0;
-  right: -87.4%;//一先ず画面外へ
-  // right: 0;
-  padding: 57.634% 0 0 12.481%;
-  overflow-y: scroll;
-  @include m.b-p(tab) {
-    width: 44%;
-    right: -44%;
-    // right: 0;
-  }
-  @include m.b-p(pc) {
-    padding: 22.343% 0 0 12.534%;
-    position: static; //PCサイズはポジション解除
-    width: auto; //幅をgridに合わせる
-    height: auto;
-  }
-  &__title{//PCサイズのみ表示のタイトル
-    @include m.b-p(pc){
-      font-size: 1.778vw;
-      margin-bottom: 2.5em;
-    }
-  }
-}
 
-.p-menu-list {
-  &__title {
-    font-weight: bold;
-    font-size: 6.4vw;
-    margin-bottom: 1.6em;
-    @include m.b-p(tab) {
-      font-size: 2.877vw;
-    }
-    @include m.b-p(pc) {
-      font-size: 1.25vw;
-    }
-  }
-}
 
-.p-menu-sub-list {
-  &__item {
-    font-size: 5.33vw;
-    padding-left: 1em;
-    @include m.b-p(tab) {
-      font-size: 2.398vw;
-    }
-    @include m.b-p(pc) {
-      font-size: 1.041vw;
-    }
-    &:not(:last-child) {
-      //最後以外にpbを適用
-      padding-bottom: 1.1em;
-    }
-    &:last-child {
-      //最後のpbは広めにする
-      padding-bottom: 1.545em;
-    }
-  }
-}
+
+
+
+
+

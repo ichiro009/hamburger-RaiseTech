@@ -9,15 +9,25 @@
   font-size: 5.33vw;
   @include m.b-p(tab) {
     font-size: 4.796vw;
-  }
+  }//メニューオープン時文字サイズを０にして消す
   &.is-active {
     font-size: 0px;
-    background: url(../icon/cross.png) no-repeat;
-    background-size: cover;
-    width: 5.33vw;
-    aspect-ratio: 1;
-    @include m.b-p(tab) {
-      width: 4.796vw;
-    }
   }
 }
+
+
+//メニュー閉鎖ボタン、is-activeクラス付与時のみ表示
+.c-menu-btn--close.is-active {
+  position: absolute;
+  top: 14px;
+  right: 32px;
+  background: url(../icon/cross.png) no-repeat;
+  background-size: cover;
+  width: 5.33vw;
+  aspect-ratio: 1;
+  @include m.b-p(tab) {
+    width: 4.796vw;
+  }
+}
+
+
