@@ -3,6 +3,7 @@
 
 .p-footer {
   color: v.$white;
+  background: v.bg-colors(footer);
   text-align: center;
   padding: 10.4% 0 8%;
   display: flex;

@@ -41,7 +41,6 @@ a {
 .l-header {
   grid-area: header;
   aspect-ratio: 375/217;
-  background: #fff7ef;
 }
 @media (min-width: 520px) {
   .l-header {
@@ -60,18 +59,7 @@ a {
 
 .l-footer {
   grid-area: footer;
-  background: #9d8670;
   aspect-ratio: 375/150;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
 }
 @media (min-width: 520px) {
   .l-footer {
@@ -125,6 +113,7 @@ a {
 
 .p-header {
   padding: 10% 8.266% 10% 6.4%;
+  background: #fff7ef;
   color: #707070;
   position: relative;
 }
@@ -612,6 +601,7 @@ a {
 
 .p-footer {
   color: #ffffff;
+  background: #9d8670;
   text-align: center;
   padding: 10.4% 0 8%;
   display: -webkit-box;
@@ -689,26 +679,79 @@ a {
   }
 }
 
-.l-aside {
+@media (min-width: 960px) {
+  .l-aside {
+    grid-area: aside;
+  }
+}
+
+.p-aside {
+  color: #707070;
   background: #f2ede9;
-  position: fixed;
   width: 87.4%;
   height: 100vh;
+  position: fixed;
+  z-index: 50;
   top: 0;
   right: -87.4%;
+  padding: 57.634% 0 0 12.481%;
+  overflow-y: scroll;
 }
 @media (min-width: 520px) {
-  .l-aside {
+  .p-aside {
     width: 44%;
     right: -44%;
   }
 }
 @media (min-width: 960px) {
-  .l-aside {
+  .p-aside {
+    padding: 22.343% 0 0 12.534%;
     position: static;
     width: auto;
     height: auto;
-    grid-area: aside;
   }
+}
+@media (min-width: 960px) {
+  .p-aside__title {
+    font-size: 1.778vw;
+    margin-bottom: 2.5em;
+  }
+}
+
+.p-menu-list__title {
+  font-weight: bold;
+  font-size: 6.4vw;
+  margin-bottom: 1.6em;
+}
+@media (min-width: 520px) {
+  .p-menu-list__title {
+    font-size: 2.877vw;
+  }
+}
+@media (min-width: 960px) {
+  .p-menu-list__title {
+    font-size: 1.25vw;
+  }
+}
+
+.p-menu-sub-list__item {
+  font-size: 5.33vw;
+  padding-left: 1em;
+}
+@media (min-width: 520px) {
+  .p-menu-sub-list__item {
+    font-size: 2.398vw;
+  }
+}
+@media (min-width: 960px) {
+  .p-menu-sub-list__item {
+    font-size: 1.041vw;
+  }
+}
+.p-menu-sub-list__item:not(:last-child) {
+  padding-bottom: 1.1em;
+}
+.p-menu-sub-list__item:last-child {
+  padding-bottom: 1.545em;
 }
 /*# sourceMappingURL=style.css.map */
