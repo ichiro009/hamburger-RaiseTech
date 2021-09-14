@@ -25,9 +25,9 @@
 <div class="l-grid">
   <header class="l-header p-header">
     <h1 class="p-header__title c-title--lv1">Hamburger</h1>
-    <form class="p-form-box">
-      <input class="p-form-box__input" type="search">
-      <button class="p-form-box__submit" type="submit">検索</button>
+    <form class="p-form-box" action="archive.html">
+      <input class="p-form-box__input" type="search" name="search" placeholder="注文内容を検索できます">
+      <button class="p-form-box__submit" type="submit" name="submit">検索</button>
     </form>
     <!-- Menu はPCサイズのみ非表示、tab/sp は表示-->
     <button class="p-header__menu-btn c-menu-btn u-disp--pc-none">Menu</button>
@@ -141,8 +141,9 @@
 
   <footer class="l-footer p-footer">
     <ul class="p-footer__nav">
-      <li class="p-footer__nav-item">ショップ情報　|</li>
-      <li class="p-footer__nav-item">　ヒストリー</li>
+      <!-- 全角スペースは可読性の問題から非推奨なので特殊文字&emsp;に変更 -->
+      <li class="p-footer__nav-item">ショップ情報&emsp;|</li>
+      <li class="p-footer__nav-item">&emsp;ヒストリー</li>
     </ul>
     <p class="p-footer__copyright"><small>Copyright: RaiseTech</small></p>
   </footer>
