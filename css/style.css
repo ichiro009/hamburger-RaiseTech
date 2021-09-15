@@ -772,6 +772,19 @@ a {
     display: block;
   }
 }
+@media (min-width: 520px) {
+  .u-disp--sp-only {
+    display: none;
+  }
+}
+.u-disp--sp-none {
+  display: none;
+}
+@media (min-width: 520px) {
+  .u-disp--sp-none {
+    display: block;
+  }
+}
 
 .u-menu-filter::before {
   content: " ";
