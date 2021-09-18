@@ -238,6 +238,8 @@ a {
 }
 .p-form-box__input:focus {
   border: 2px solid currentColor;
+  -webkit-box-shadow: inset 2px 1px 5px currentColor;
+          box-shadow: inset 2px 1px 5px currentColor;
 }
 .p-form-box__submit {
   width: 24.375%;
