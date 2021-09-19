@@ -17,6 +17,7 @@
 
 
 //メニュー閉鎖ボタン、is-activeクラス付与時のみ表示
+
 .c-menu-btn--close.is-active {
   position: absolute;
   top: 14px;
@@ -31,3 +32,25 @@
 }
 
 
+.c-btn--readmore {
+  font-size: 4.266vw;
+  line-height:1.062;
+  color: v.$gray;
+  background: v.$white;
+  border: 1px solid currentColor;
+  border-radius: 20px;
+  padding: 0.6em 2.625em;
+  transition: 0.3s;
+  &:hover {
+    color: v.$white;
+    background: v.$gray;
+    transition: 0.3s;
+  }
+  @include m.b-p(tab) {
+    font-size: 1.918vw;
+  }
+  @include m.b-p(pc) {
+    font-size: 0.833vw;
+    padding: 1.687em 6.625em;
+  }
+}

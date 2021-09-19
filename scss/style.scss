@@ -12,6 +12,7 @@
 // component
 @use "./object/component/title";
 @use "./object/component/btn";
+@use "./object/component/inner";
 // project
 @use "./object/project/p-header";
 @use "./object/project/form";
@@ -21,6 +22,7 @@
 @use "./object/project/p-footer";
 @use "./object/project/p-aside";
 @use "./object/project/menu-list";
+@use "./object/project/archive-hero";
 // utility
 @use "./object/utility/display";
 @use "./object/utility/menu-filter";
@@ -34,6 +36,12 @@
 
 
 
+// .p-intro{
 
+//   &__title{
 
+//   }
+//   &__text{
 
+//   }
+// }
