@@ -868,6 +868,44 @@ a {
   }
 }
 
+.p-intro {
+  color: #3C2A10;
+}
+.p-intro__title {
+  line-height: 1.5;
+  font-size: 7.466vw;
+  margin-bottom: 1.0714em;
+}
+@media (min-width: 520px) {
+  .p-intro__title {
+    font-size: 4.316vw;
+    margin-bottom: 0.694em;
+  }
+}
+@media (min-width: 960px) {
+  .p-intro__title {
+    font-size: 1.918vw;
+  }
+}
+.p-intro__text {
+  font-weight: normal;
+  line-height: 1.437;
+  font-size: 4.266vw;
+  margin-bottom: 1.187em;
+}
+@media (min-width: 520px) {
+  .p-intro__text {
+    font-size: 1.918vw;
+    margin-bottom: 2.312em;
+  }
+}
+@media (min-width: 960px) {
+  .p-intro__text {
+    font-size: 0.833vw;
+    margin-bottom: 4.375em;
+  }
+}
+
 @media (min-width: 960px) {
   .u-disp--pc-none {
     display: none;

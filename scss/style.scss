@@ -23,6 +23,7 @@
 @use "./object/project/p-aside";
 @use "./object/project/menu-list";
 @use "./object/project/archive-hero";
+@use "./object/project/intro";
 // utility
 @use "./object/utility/display";
 @use "./object/utility/menu-filter";
@@ -34,14 +35,3 @@
 // baseにfont-family: 'M PLUS 1p', sans-serif;を使ってるのでh1以外Robotoのみ上書き
 
 
-
-
-// .p-intro{
-
-//   &__title{
-
-//   }
-//   &__text{
-
-//   }
-// }
