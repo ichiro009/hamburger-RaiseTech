@@ -33,5 +33,13 @@
 // @useは読み込ませる変数・mixinが無い場合もエラーが出る場合がある：要検証
 // 一時的にこちらに記入して随時ファイル分けをする
 // baseにfont-family: 'M PLUS 1p', sans-serif;を使ってるのでh1以外Robotoのみ上書き
-
-
+//m.fz-vw(,)フォントサイズをpx->vw に変換するmixin
+.p-card__title--lv3 {
+  @include m.fz-vw(sp, 20);
+  @include m.b-p(tab) {
+    @include m.fz-vw(tab, 20);
+  }
+  @include m.b-p(pc) {
+    @include m.fz-vw(pc, 36);
+  }
+}

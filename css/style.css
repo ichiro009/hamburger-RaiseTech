@@ -963,4 +963,18 @@ a {
 .u-menu-filter.is-active::before {
   opacity: 1;
 }
+
+.p-card__title--lv3 {
+  font-size: 5.3333333333vw;
+}
+@media (min-width: 520px) {
+  .p-card__title--lv3 {
+    font-size: 2.3980815348vw;
+  }
+}
+@media (min-width: 960px) {
+  .p-card__title--lv3 {
+    font-size: 1.875vw;
+  }
+}
 /*# sourceMappingURL=style.css.map */
