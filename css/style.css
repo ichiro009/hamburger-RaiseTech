@@ -961,20 +961,114 @@ a {
   overflow-y: hidden;
 }
 .u-menu-filter.is-active::before {
+  pointer-events: auto;
   opacity: 1;
 }
 
+.p-archive-body {
+  width: 100%;
+  margin-bottom: 16%;
+}
+.p-archive-body__item:not(:last-child) {
+  margin-bottom: 20.5px;
+}
+
+.p-card {
+  max-width: 100%;
+  color: #ffffff;
+}
+@media (min-width: 520px) {
+  .p-card {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    aspect-ratio: 756.11/354.5;
+  }
+}
+@media (min-width: 960px) {
+  .p-card {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    aspect-ratio: 1353/471;
+  }
+}
+.p-card__img {
+  aspect-ratio: 336.11/230.53;
+}
+@media (min-width: 520px) {
+  .p-card__img {
+    width: 50%;
+    aspect-ratio: normal;
+  }
+}
+.p-card__caption {
+  background: #3C2B1C;
+  padding: 8.928% 21.726% 12.797% 5.059%;
+}
+@media (min-width: 520px) {
+  .p-card__caption {
+    padding: 3.671%;
+  }
+}
+@media (min-width: 960px) {
+  .p-card__caption {
+    padding: 2.76vw 3.281vw;
+  }
+}
 .p-card__title--lv3 {
   font-size: 5.3333333333vw;
+  margin-bottom: 1.2em;
 }
 @media (min-width: 520px) {
   .p-card__title--lv3 {
     font-size: 2.3980815348vw;
+    margin-bottom: 1.2em;
   }
 }
 @media (min-width: 960px) {
   .p-card__title--lv3 {
     font-size: 1.875vw;
+  }
+}
+.p-card__title--lv4 {
+  font-size: 4.2666666667vw;
+  margin-bottom: 0.625em;
+}
+@media (min-width: 520px) {
+  .p-card__title--lv4 {
+    font-size: 1.9184652278vw;
+  }
+}
+@media (min-width: 960px) {
+  .p-card__title--lv4 {
+    font-size: 1.25vw;
+  }
+}
+.p-card__text {
+  font-size: 4.2666666667vw;
+  margin-bottom: 2.5em;
+  line-height: 1.4375;
+  font-weight: normal;
+}
+@media (min-width: 520px) {
+  .p-card__text {
+    font-size: 1.9184652278vw;
+  }
+}
+@media (min-width: 960px) {
+  .p-card__text {
+    font-size: 0.8333333333vw;
+    margin-bottom: 3.75em;
+  }
+}
+.p-card .c-btn--readmore {
+  margin-left: 28%;
+}
+@media (min-width: 520px) {
+  .p-card .c-btn--readmore {
+    display: table;
+    margin: 0 auto;
   }
 }
 /*# sourceMappingURL=style.css.map */

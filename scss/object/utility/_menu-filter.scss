@@ -21,6 +21,7 @@
   position: fixed;
   overflow-y: hidden;
   &::before {
+    pointer-events: auto; //フィルター下のイベントを実行させない
     opacity: 1; //メニューオープン時フワッっとフィルターを出す
   }
 }
