@@ -1,4 +1,5 @@
 @use "../../foundation/mixin"as m;
+
 .u-disp {
   &--pc-none {
     @include m.b-p(pc) {

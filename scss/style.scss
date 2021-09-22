@@ -24,9 +24,13 @@
 @use "./object/project/menu-list";
 @use "./object/project/archive-hero";
 @use "./object/project/intro";
+@use "./object/project/archive-body";
+@use "./object/project/card";
+@use "./object/project/pager";
 // utility
 @use "./object/utility/display";
 @use "./object/utility/menu-filter";
+@use "./object/utility/arrow";
 
 // ファイルを分ける時こちらとは変数・mixinファイルへのパスが変わるので注意
 // @useは、同じファイル名の場合エラーが出るp-を付けて対応
@@ -35,86 +39,8 @@
 // m.fz-vw(,)フォントサイズをpx->vw に変換するmixin
 // 一時的にこちらに記入して随時ファイル分けをする
 
-.p-archive-body {
-  width: 100%;
-  margin-bottom: 16%; //一番下からページャーまでのmb
-  // &__list {
-  // }
-  &__item {
-    &:not(:last-child) {
-      //最後以外にmbを設定
-      margin-bottom: 20.5px;
-    }
-  }
-}
 
-.p-card {
-  max-width: 100%;
-  color: v.$white;
-  @include m.b-p(tab) {
-    display: flex;
-    aspect-ratio: 756.11/354.5;
-  }
-  @include m.b-p(pc) {
-    display: flex;
-    aspect-ratio: 1353/471;
-  }
-  &__img {
-    aspect-ratio: 336.11/230.53;
-    @include m.b-p(tab) {
-      width: 50%;
-      aspect-ratio: normal; //p-card全体でアスペクト比率を保たせるので元に戻す
-    }
-  }
-  &__caption {
-    background: v.bg-colors(card);
-    padding: 8.928% 21.726% 12.797% 5.059%;
-    @include m.b-p(tab) {
-      padding: 3.671%;
-    }
-    @include m.b-p(pc) {
-      padding: 2.76vw 3.281vw;
-    }
-  }
-  &__title--lv3 {
-    @include m.fz-vw(sp, 20);
-    margin-bottom: 1.2em;
-    @include m.b-p(tab) {
-      @include m.fz-vw(tab, 20);
-      margin-bottom: 1.2em;
-    }
-    @include m.b-p(pc) {
-      @include m.fz-vw(pc, 36);
-    }
-  }
-  &__title--lv4 {
-    @include m.fz-vw(sp, 16);
-    margin-bottom: 0.625em;
-    @include m.b-p(tab) {
-      @include m.fz-vw(tab, 16);
-    }
-    @include m.b-p(pc) {
-      @include m.fz-vw(pc, 24);
-    }
-  }
-  &__text {
-    @include m.fz-vw(sp, 16);
-    margin-bottom: 2.5em;
-    line-height: 1.4375;
-    font-weight: normal;
-    @include m.b-p(tab) {
-      @include m.fz-vw(tab, 16);
-    }
-    @include m.b-p(pc) {
-      @include m.fz-vw(pc, 16);
-      margin-bottom: 3.75em;
-    }
-  }
-  .c-btn--readmore {
-    margin-left: 28%;
-    @include m.b-p(tab) {
-      display: table;
-      margin: 0 auto;
-    }
-  }
-}
+
+
+
+

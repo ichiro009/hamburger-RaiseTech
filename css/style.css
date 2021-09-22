@@ -906,65 +906,6 @@ a {
   }
 }
 
-@media (min-width: 960px) {
-  .u-disp--pc-none {
-    display: none;
-  }
-}
-.u-disp--pc-only {
-  display: none;
-}
-@media (min-width: 520px) {
-  .u-disp--pc-only {
-    display: none;
-  }
-}
-@media (min-width: 960px) {
-  .u-disp--pc-only {
-    display: block;
-  }
-}
-@media (min-width: 520px) {
-  .u-disp--sp-only {
-    display: none;
-  }
-}
-.u-disp--sp-none {
-  display: none;
-}
-@media (min-width: 520px) {
-  .u-disp--sp-none {
-    display: block;
-  }
-}
-
-.u-menu-filter::before {
-  content: " ";
-  pointer-events: none;
-  position: absolute;
-  width: 12.6%;
-  height: 100vh;
-  background: rgba(0, 0, 0, 0.5);
-  opacity: 0;
-  -webkit-transition: 0.5s ease-in-out;
-  transition: 0.5s ease-in-out;
-  z-index: 50;
-}
-@media (min-width: 520px) {
-  .u-menu-filter::before {
-    width: 59%;
-  }
-}
-
-.u-menu-filter.is-active {
-  position: fixed;
-  overflow-y: hidden;
-}
-.u-menu-filter.is-active::before {
-  pointer-events: auto;
-  opacity: 1;
-}
-
 .p-archive-body {
   width: 100%;
   margin-bottom: 16%;
@@ -1069,6 +1010,168 @@ a {
   .p-card .c-btn--readmore {
     display: table;
     margin: 0 auto;
+  }
+}
+
+.p-pager {
+  color: #707070;
+  font-size: 4.2666666667vw;
+}
+@media (min-width: 520px) {
+  .p-pager {
+    font-weight: bold;
+    font-size: 1.9184652278vw;
+  }
+}
+@media (min-width: 960px) {
+  .p-pager {
+    font-size: 0.8333333333vw;
+  }
+}
+.p-pager__inner-sp {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.p-pager__link-sp {
+  font-weight: normal;
+}
+.p-pager__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.p-pager__list::before {
+  content: "page 1/10";
+  -webkit-transform: translateY(0.1em);
+          transform: translateY(0.1em);
+  margin-right: 1.518em;
+}
+.p-pager__item:not(:last-of-type) {
+  margin-right: 1em;
+}
+.p-pager__item:not(:first-of-type):not(:last-of-type) {
+  border: 1px solid currentColor;
+}
+.p-pager__item:not(:first-of-type):not(:last-of-type):hover {
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  background: #707070;
+  color: #ffffff;
+  border: 1px solid #707070;
+}
+.p-pager__item:first-of-type, .p-pager__item:last-of-type {
+  -webkit-transform: translateY(0.1em);
+          transform: translateY(0.1em);
+}
+.p-pager__link {
+  padding: 0.2em 0.5em;
+}
+
+@media (min-width: 960px) {
+  .u-disp--pc-none {
+    display: none;
+  }
+}
+.u-disp--pc-only {
+  display: none;
+}
+@media (min-width: 520px) {
+  .u-disp--pc-only {
+    display: none;
+  }
+}
+@media (min-width: 960px) {
+  .u-disp--pc-only {
+    display: block;
+  }
+}
+@media (min-width: 520px) {
+  .u-disp--sp-only {
+    display: none;
+  }
+}
+.u-disp--sp-none {
+  display: none;
+}
+@media (min-width: 520px) {
+  .u-disp--sp-none {
+    display: block;
+  }
+}
+
+.u-menu-filter::before {
+  content: " ";
+  pointer-events: none;
+  position: absolute;
+  width: 12.6%;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  -webkit-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
+  z-index: 50;
+}
+@media (min-width: 520px) {
+  .u-menu-filter::before {
+    width: 59%;
+  }
+}
+
+.u-menu-filter.is-active {
+  position: fixed;
+  overflow-y: hidden;
+}
+.u-menu-filter.is-active::before {
+  pointer-events: auto;
+  opacity: 1;
+}
+
+.u-arrow--left::before {
+  content: "";
+  display: inline-block;
+  width: 4.2666vw;
+  aspect-ratio: 1;
+  -webkit-transform: translateY(0.1em);
+          transform: translateY(0.1em);
+  background: url(../icon/left-arrow.png) no-repeat;
+  background-size: cover;
+}
+@media (min-width: 520px) {
+  .u-arrow--left::before {
+    width: 1.918vw;
+  }
+}
+@media (min-width: 960px) {
+  .u-arrow--left::before {
+    width: 0.833vw;
+  }
+}
+
+.u-arrow--right::after {
+  content: "";
+  display: inline-block;
+  width: 4.2666vw;
+  aspect-ratio: 1;
+  -webkit-transform: translateY(0.1em);
+          transform: translateY(0.1em);
+  background: url(../icon/right-arrow.png) no-repeat;
+  background-size: cover;
+}
+@media (min-width: 520px) {
+  .u-arrow--right::after {
+    width: 1.918vw;
+  }
+}
+@media (min-width: 960px) {
+  .u-arrow--right::after {
+    width: 0.833vw;
   }
 }
 /*# sourceMappingURL=style.css.map */
