@@ -20,7 +20,7 @@
   &__link-sp {
     font-weight: normal;
   }
-  &__list {
+  &__list {//tab/pcサイズのページャー
     display: flex;
     justify-content: center;
     &::before {
@@ -34,7 +34,9 @@
   }
   &__item:not(:first-of-type):not(:last-of-type) {//数字の箇所中央にのみボーダーを設定
     border: 1px solid currentColor;
+    transition: 0.3s;
     &:hover {
+      transform:scale(1.4);
       transition: 0.3s;
       background: v.$gray;
       color: v.$white;
@@ -45,7 +47,7 @@
   &__item:last-of-type {
     transform: translateY(0.1em);
   }
-  &__link {
+  &__link {//リンクのpaddingをemにして文字サイズに応じて可変
   padding: .2em .5em;
   }
 }

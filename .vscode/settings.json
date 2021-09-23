@@ -1,2 +1,6 @@
-{"dartsass.targetDirectory": "css/",
+{
+  "dartsass.targetDirectory": "css/",
+  "cSpell.words": [
+    "readmore"
+  ],
 }

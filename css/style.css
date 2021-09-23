@@ -1058,8 +1058,12 @@ a {
 }
 .p-pager__item:not(:first-of-type):not(:last-of-type) {
   border: 1px solid currentColor;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
 }
 .p-pager__item:not(:first-of-type):not(:last-of-type):hover {
+  -webkit-transform: scale(1.4);
+          transform: scale(1.4);
   -webkit-transition: 0.3s;
   transition: 0.3s;
   background: #707070;
