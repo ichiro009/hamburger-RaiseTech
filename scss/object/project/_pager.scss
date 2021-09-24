@@ -43,7 +43,8 @@
       border: 1px solid v.$gray;
     }
   }
-  &__item:first-of-type,//矢印の疑似要素の位置を調整(u-arrowの調整
+//矢印の疑似要素の位置を調整(u-arrowの調整
+  &__item:first-of-type,
   &__item:last-of-type {
     transform: translateY(0.1em);
   }

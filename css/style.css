@@ -281,8 +281,8 @@ a {
 }
 .p-form-box__input:focus {
   border: 2px solid currentColor;
-  -webkit-box-shadow: inset 2px 1px 5px currentColor;
-          box-shadow: inset 2px 1px 5px currentColor;
+  -webkit-box-shadow: inset 1px 1px 3px currentColor;
+          box-shadow: inset 1px 1px 3px currentColor;
 }
 .p-form-box__submit {
   width: 24.375%;
@@ -743,7 +743,7 @@ a {
 @media (min-width: 960px) {
   .p-aside {
     padding: 22.343% 0 0 12.534%;
-    overflow-y: auto;
+    overflow-y: none;
     position: static;
     width: auto;
     height: auto;
