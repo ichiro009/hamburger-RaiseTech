@@ -40,11 +40,11 @@
   border: 1px solid currentColor;
   border-radius: 20px;
   padding: 0.6em 2.625em;
-  transition: 0.3s;
+  transition: 0.3s background-color;
   &:hover {
     color: v.$white;
     background: v.$gray;
-    transition: 0.3s;
+    transition: 0.3s background-color;
   }
   @include m.b-p(tab) {
     font-size: 1.918vw;

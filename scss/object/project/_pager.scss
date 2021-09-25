@@ -34,10 +34,12 @@
   }
   &__item:not(:first-of-type):not(:last-of-type) {//数字の箇所中央にのみボーダーを設定
     border: 1px solid currentColor;
-    transition: 0.3s;
+    transition: 0.3s background-color;
+    transition: 0.3s transform;
     &:hover {
       transform:scale(1.4);
-      transition: 0.3s;
+      transition: 0.3s background-color;
+      transition: 0.3s transform;
       background: v.$gray;
       color: v.$white;
       border: 1px solid v.$gray;
