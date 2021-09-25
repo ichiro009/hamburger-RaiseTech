@@ -1,7 +1,7 @@
 @use "../../foundation/mixin"as m;
 @use "../../foundation/variable"as v;
 
-.p-pager {
+.p-pager {//ページャー全体の設定
   color: v.$gray;
   @include m.fz-vw(sp, 16);
   @include m.b-p(tab) {
@@ -11,7 +11,7 @@
   @include m.b-p(pc) {
     @include m.fz-vw(pc, 16);
   }
-  &__inner-sp {
+  &__inner-sp {//spサイズのページャー
     display: flex;
     justify-content: space-between;
   }

@@ -608,7 +608,7 @@ a {
 
 .p-footer {
   color: #ffffff;
-  background: url(../../../imges/front-page/sp/footer-sp.png);
+  background: url(../imges/front-page/sp/footer-sp.png);
   text-align: center;
   padding: 10.4% 0 8%;
   display: flex;
@@ -996,6 +996,61 @@ a {
 }
 .p-pager__link {
   padding: 0.2em 0.5em;
+}
+
+.p-hero, .p-hero--page, .p-hero--single {
+  padding-left: 6.933%;
+  width: 100%;
+  aspect-ratio: 375/225;
+  display: flex;
+  align-items: center;
+}
+@media (min-width: 520px) {
+  .p-hero, .p-hero--page, .p-hero--single {
+    padding-left: 8.311%;
+    aspect-ratio: 834/500;
+  }
+}
+@media (min-width: 960px) {
+  .p-hero, .p-hero--page, .p-hero--single {
+    aspect-ratio: 1553/500;
+    padding-left: 5%;
+  }
+}
+.p-hero--single {
+  background: url(../imges/single/single-hero-sp.png) no-repeat;
+  background-size: cover;
+}
+@media (min-width: 960px) {
+  .p-hero--single {
+    background: url(../imges/single/single-hero-pc.jpg) no-repeat;
+    background-size: contain;
+  }
+}
+.p-hero--page {
+  background: url(../imges/page/page-hero-sp.jpg) no-repeat;
+  background-size: cover;
+}
+@media (min-width: 960px) {
+  .p-hero--page {
+    background: url(../imges/page/page-hero-pc.jpg) no-repeat;
+    background-size: contain;
+  }
+}
+.p-hero__title {
+  color: #ffffff;
+  font-size: 9.6vw;
+  font-family: "M PLUS 1p", sans-serif;
+}
+@media (min-width: 520px) {
+  .p-hero__title {
+    font-size: 7.1942446043vw;
+  }
+}
+@media (min-width: 960px) {
+  .p-hero__title {
+    font-size: 3.125vw;
+  }
 }
 
 @media (min-width: 960px) {
