@@ -1467,6 +1467,27 @@ th {
   }
 }
 
+.p-content {
+  color: #3C2A10;
+}
+.p-content .c-btn--large {
+  margin-bottom: 1.875em;
+}
+.p-content__text-bold {
+  font-weight: bold;
+  font-size: 4.2666666667vw;
+}
+@media (min-width: 520px) {
+  .p-content__text-bold {
+    font-size: 1.9184652278vw;
+  }
+}
+@media (min-width: 960px) {
+  .p-content__text-bold {
+    font-size: 0.8333333333vw;
+  }
+}
+
 @media (min-width: 960px) {
   .u-disp--pc-none {
     display: none;
