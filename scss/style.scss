@@ -32,6 +32,9 @@
 @use "./object/project/quote";
 @use "./object/project/media";
 @use "./object/project/gallery";
+@use "./object/project/lists";
+@use "./object/project/format";
+@use "./object/project/table";
 // utility
 @use "./object/utility/display";
 @use "./object/utility/menu-filter";
@@ -44,11 +47,5 @@
 // m.fz-vw(,)フォントサイズをpx->vw に変換するmixin archiveの途中から使用
 // 一時的にこちらに記入して随時ファイル分けをする
 // 画像のパスはCSS側に合わせる必要があるので../ で統一
-
-.p-content {
-  color: v.$black;
-}
-
-
 
 

@@ -20,7 +20,7 @@
   }
   @include m.b-p(pc) {
     padding: 22.343% 0 0 12.534%;
-    overflow-y: none; //PCサイズは、スクロールバーの表示を消す
+    overflow-y: hidden; //PCサイズは、スクロールバーの表示を消す
     position: static; //PCサイズはポジション解除
     width: auto; //幅をgridに合わせる
     height: auto;

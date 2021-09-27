@@ -21,7 +21,14 @@ h1{
 ul,ol{
   list-style-type:none;
 }
+ol {
+  list-style-type: decimal;
+  padding-left: 1em;
+}
 a{
   color:inherit;
   text-decoration:none;
+}
+th{
+  font-weight: normal;
 }

@@ -5,6 +5,7 @@ $bg-colors: (
   footer: #9d8670,
   card: #3C2B1C,
   btn: linear-gradient(#f2ede9, #ded8d3),
+  btn-turn: linear-gradient( #ded8d3,#f2ede9),
 );
 
 @function bg-colors($key) {

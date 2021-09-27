@@ -2,7 +2,7 @@
 @use "../../foundation/variable"as v;
 
 .p-archive-hero {
-  background: url(../../../imges/archive/archive-hero-sp.jpg);
+  background: url(../imges/archive/archive-hero-sp.jpg);
   background-position: left center;
   background-size: cover;
   aspect-ratio: 375/283;
@@ -13,7 +13,7 @@
   }
   @include m.b-p(pc) {
     aspect-ratio: 1553/239;
-    background: url(../../../imges/archive/archive-hero-pc.jpg);
+    background: url(../imges/archive/archive-hero-pc.jpg);
     background-size: contain;
   }
   &::after {

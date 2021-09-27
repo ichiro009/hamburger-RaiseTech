@@ -2,8 +2,8 @@
 @use "../../foundation/variable"as v;
 
 
-.p-title-area {
-  //各々mbが違うので共通化は断念して個別に設定
+.p-title-area {//c-titleに文字サイズを設定
+  //各々mbが微妙に・・違うので共通化は断念して個別に設定
   > h2 {
     margin-bottom: 1.071em;
     @include m.b-p(tab) {

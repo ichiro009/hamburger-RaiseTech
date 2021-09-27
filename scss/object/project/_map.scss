@@ -12,7 +12,7 @@
     aspect-ratio: 1553/649;
   }
   &::after {
-    //g-mapの透過フィルター１枚目の薄い黒
+    //g-mapの全体透過フィルター１枚目の薄い黒
     content: "";
     position: absolute;
     z-index: 2;
@@ -22,7 +22,7 @@
     background: rgba(0, 0, 0, 0.4);
   }
   &__g-map {
-    //最下層
+    //最下層 グーグルマップそのもの
     position: absolute;
     z-index: -1;
     width: 100%;
@@ -30,7 +30,7 @@
     pointer-events: none;
   }
   &__filter {
-    //g-mapの透過フィルター２枚目濃い黒
+    //g-mapの透過フィルター２枚目濃い黒width/heightが変化する
     position: absolute;
     z-index: 3;
     width: 100%;
