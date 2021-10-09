@@ -575,18 +575,7 @@ th {
 
 .p-map {
   color: #ffffff;
-  aspect-ratio: 375/691;
   position: relative;
-}
-@media (min-width: 520px) {
-  .p-map {
-    aspect-ratio: 834/415;
-  }
-}
-@media (min-width: 960px) {
-  .p-map {
-    aspect-ratio: 1553/649;
-  }
 }
 .p-map::after {
   content: "";
@@ -622,7 +611,7 @@ th {
   }
 }
 .p-map__text-wrap {
-  position: absolute;
+  position: relative;
   z-index: 5;
   height: 100%;
   padding: 10.666%;
@@ -642,17 +631,18 @@ th {
 }
 .p-map__title {
   font-size: 8vw;
-  margin-bottom: 10.666%;
+  margin-bottom: 10.288vw;
   position: relative;
 }
 @media (min-width: 520px) {
   .p-map__title {
+    margin-bottom: 5.088vw;
     font-size: 3.597vw;
-    margin-bottom: 0;
   }
 }
 @media (min-width: 960px) {
   .p-map__title {
+    margin-bottom: 7.088vw;
     font-size: 1.875vw;
   }
 }

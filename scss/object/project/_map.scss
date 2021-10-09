@@ -3,14 +3,8 @@
 
 .p-map {
   color: v.$white;
-  aspect-ratio: 375/691;
   position: relative;
-  @include m.b-p(tab) {
-    aspect-ratio: 834/415;
-  }
-  @include m.b-p(pc) {
-    aspect-ratio: 1553/649;
-  }
+ 
   &::after {
     //g-mapの全体透過フィルター１枚目の薄い黒
     content: "";
@@ -45,7 +39,7 @@
   }
   &__text-wrap {
     //テキストが入るエリア最前
-    position: absolute;
+    position: relative;
     z-index: 5;
     height: 100%;
     padding: 10.666%;
@@ -62,13 +56,15 @@
 
   &__title {
     font-size: 8vw;
-    margin-bottom: 10.666%;
+    margin-bottom: 10.288vw;//疑似要素のbottomの２倍の長さになる。次からは変数を検討する
     position: relative;
     @include m.b-p(tab) {
+    margin-bottom: 5.088vw;
       font-size: 3.597vw;
-      margin-bottom: 0; //tab PCサイズはタイトルテキスト間の余白をjustify-content: space-between;で調整
+    
     }
     @include m.b-p(pc) {
+      margin-bottom: 7.088vw;
       font-size: 1.875vw;
     }
     &::after {
