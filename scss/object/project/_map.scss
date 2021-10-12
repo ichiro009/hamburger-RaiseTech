@@ -1,6 +1,13 @@
 @use "../../foundation/mixin"as m;
 @use "../../foundation/variable"as v;
 
+// 後で調整しやすいように
+// p-map_title、margin-bottomの値を変数で定義
+// その半分でマイナス値がp-map_title::after白い線のbottomの値になる
+$sp:10.288;
+$tab: 5.088;
+$pc:7.088;
+
 .p-map {
   color: v.$white;
   position: relative;
@@ -53,37 +60,35 @@
       width: 61.171%;
     }
   }
-
   &__title {
     font-size: 8vw;
-    margin-bottom: 10.288vw;//疑似要素のbottomの２倍の長さになる。次からは変数を検討する
+    margin-bottom: #{$sp}vw;//テキストまでのマージン
     position: relative;
     @include m.b-p(tab) {
-    margin-bottom: 5.088vw;
-      font-size: 3.597vw;
-    
+    margin-bottom: #{$tab}vw;
+      font-size: 3.597vw;  
     }
     @include m.b-p(pc) {
-      margin-bottom: 7.088vw;
+      margin-bottom: #{$pc}vw;
       font-size: 1.875vw;
     }
     &::after {
-      //見出しの下の白い線
+      //見出しの下の白い線、テキストと見出しの中間位置にある
       content: " ";
       display: inline-block;
       height: 2px;
       width: 20vw;
       background: v.$white;
       position: absolute;
-      bottom: -5.144vw;
+      bottom: #{$sp/-2}vw;//中間の位置にあるのでマイナス半分の値
       left: 0;
       @include m.b-p(tab) {
         width: 8.992vw;
-        bottom: -2.544vw;
+        bottom: #{$tab/-2}vw;
       }
       @include m.b-p(pc) {
         width: 3.906vw;
-        bottom: -3.544vw;
+        bottom: #{$pc/-2}vw;
       }
     }
   }
