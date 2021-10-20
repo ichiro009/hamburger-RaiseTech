@@ -2,49 +2,51 @@
 @use "../../foundation/variable"as v;
 
 .p-branch {
-  aspect-ratio: 375/1374;
   background: v.bg-colors(branch);
   padding: 5.333% 5.333% 13.333%;
   @include m.b-p(tab) {
-    aspect-ratio: 834/761;
     padding: 4.796%;
   }
   @include m.b-p(pc) {
-    aspect-ratio: 1553/1447;
-    padding: 7.726% 7.147% 8.628%  ;
+    padding: 7.726% 7.147% 8.628%;
   }
   &__container {
-    height: 100%;
     display: flex;
-    flex-direction: column; //主軸が縦方向になるので注意
-    justify-content: space-between; //spではtake-outとeat-inを上下に
+    flex-direction: column; 
     @include m.b-p(tab) {
       flex-direction: row; //横並びに戻す
+      justify-content: space-between; 
     }
   }
   &__list {
-    height: 49.233%; //flexボックスの上下の比率
+    height: auto;
     @include m.b-p(tab) {
-      height: auto;//元に戻す
       width: 47.277%;
     }
     @include m.b-p(pc) {
-      width: 46.992%;
+      width: 100%;//PC サイズだとwidthが効かない？？
+    }
+    &:first-child {//take-outの方
+      margin-bottom: 5.97%;
+      @include m.b-p(tab) {
+        margin-bottom: 0px;
+      }
+      @include m.b-p(pc) {
+        margin-right: 5.97%;//上記理由からmrで対応
+      }
     }
   }
   &__item {
-    display: flex;
-    flex-direction: column; //主軸が縦方向になるので注意
-    justify-content: space-between; //見出しとテキスト部分を上下に
-    padding: 3.283% 2.985% 2.985%;
-    height: 100%; //親要素の高さをフルに使う
+    display: inline-block;//aタグのインライン要素を変更
     background-size: cover;
     background-repeat: no-repeat;
+    padding: 3.283% 2.985% 0px;
     @include m.b-p(tab) {
-      padding: 3.361% 3.361% 2.24%;
+      padding: 3.361% 3.361% 0px;
     }
     @include m.b-p(pc) {
-    padding: 3.2%;
+      width: 100%;
+      padding: 3.2% 3.2% 0px;
     }
     &--take-out {
       //画像が各々違うので別ヴァージョンでまたは、HTMLにbg-imageを書く場合も検討。
@@ -61,6 +63,7 @@
     font-family: "Roboto", sans-serif;
     font-size: 10.933vw;
     line-height: 1.317;
+    margin-bottom: 5.658em; //タイトルからテキストボックスまで
     position: relative;
     @include m.b-p(tab) {
       font-size: 5.275vw;
@@ -99,34 +102,23 @@
     }
   }
 }
-
 // 下のbottom-boxはここから
 .p-branch__bottom-box {
-  aspect-ratio: 314/335; //ボックス全体のアスペクト比率を割り出す
-  display: flex;
-  flex-direction: column; //主軸が縦方向になるので注意
-  justify-content: space-between; //２つのテキストボックスを上下に
-  @include m.b-p(tab) {
-    aspect-ratio: 334/357;
-  }
-  @include m.b-p(pc) {
-    aspect-ratio: 585/368;
-  }
   &__list {
     color: v.$black;
-    height: 48.656%;
     background: rgba(255, 255, 255, 0.73);
-    padding: 6.05% 4.458% 0 3.184%;
+    padding: 6.05% 4.458% 14.46% 3.184%;
+    margin-bottom: 3.184%; //二か所ある
   }
   &__dt {
     font-size: 5.866vw;
     font-weight: bold;
-    margin-bottom: 19px;
+    margin-bottom: 0.863em;
     @include m.b-p(tab) {
       font-size: 2.877vw;
     }
     @include m.b-p(pc) {
-      font-size: 1.25vw;
+      font-size: 1.35vw;
     }
   }
   &__dd {
@@ -135,7 +127,7 @@
       font-size: 1.918vw;
     }
     @include m.b-p(pc) {
-      font-size: 0.833vw;
+      font-size: 0.933vw;
     }
   }
 }

@@ -6,17 +6,13 @@
   color: v.$white;
   @include m.b-p(tab) {
     display: flex;
-    aspect-ratio: 756.11/354.5;
-  }
-  @include m.b-p(pc) {
-    display: flex;
-    aspect-ratio: 1353/471;
   }
   &__img {
     aspect-ratio: 336.11/230.53;
     @include m.b-p(tab) {
       width: 50%;//画像の幅を半分に残りをcaptionに
-      aspect-ratio: normal; //p-card全体でアスペクト比率を保たせるので元に戻す
+      object-fit: fill;
+      aspect-ratio: normal; //元に戻す
     }
   }
   &__caption {
@@ -38,6 +34,7 @@
     }
     @include m.b-p(pc) {
       @include m.fz-vw(pc, 36);
+      margin-bottom: 1.305em;
     }
   }
   &__title--lv4 {
@@ -48,6 +45,7 @@
     }
     @include m.b-p(pc) {
       @include m.fz-vw(pc, 24);
+      margin-bottom: 0.708em;
     }
   }
   &__text {
