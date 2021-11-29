@@ -715,6 +715,20 @@ th {
     font-size: 1.041vw;
   }
 }
+.p-footer__nav-item:first-child {
+  margin-right: 1em;
+  position: relative;
+}
+.p-footer__nav-item:first-child::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: -0.6em;
+  width: 0.1em;
+  height: 1em;
+  background: Currentcolor;
+}
 .p-footer__copyright {
   font-size: 3.733vw;
 }
